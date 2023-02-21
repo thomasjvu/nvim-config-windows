@@ -13,9 +13,7 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use('shaunsingh/seoul256.nvim')
     use('ackyshake/Spacegray.vim')
-    use({'catppuccin/nvim', as = "catppuccin"})
 
     use('mattn/emmet-vim')
 
@@ -78,6 +76,10 @@ return require('packer').startup(function(use)
         "nvim-telescope/telescope-file-browser.nvim",
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     }
+
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end}
 
     use('Exafunction/codeium.vim')
     use('nvim-lualine/lualine.nvim')
