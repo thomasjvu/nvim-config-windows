@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
     }
 
     use('ackyshake/Spacegray.vim')
+    use('EdenEast/nightfox.nvim')
 
     use('mattn/emmet-vim')
 
