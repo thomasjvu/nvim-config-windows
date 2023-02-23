@@ -13,27 +13,31 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    }
+
     use('ackyshake/Spacegray.vim')
-    use('EdenEast/nightfox.nvim')
 
     use('mattn/emmet-vim')
 
     use('prettier/vim-prettier')
 
     use({'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}})
-    use({'nvim-treesitter/playground'})
+    -- use({'nvim-treesitter/playground'})
     use('theprimeagen/harpoon')
-    use('mbbill/undotree')
+    -- use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('tpope/vim-commentary')
 
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
-        tag = 'nightly' -- optional, updated every week. (see issue #1193)
-    }
+    -- use {
+    --     'nvim-tree/nvim-tree.lua',
+    --     requires = {
+    --         'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    --     },
+    --     tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    -- }
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -73,18 +77,12 @@ return require('packer').startup(function(use)
         end,
     }
 
-    use {
-        "nvim-telescope/telescope-file-browser.nvim",
-        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-    }
-
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
     end}
 
-    use('Exafunction/codeium.vim')
+    -- use('Exafunction/codeium.vim')
     use('nvim-lualine/lualine.nvim')
     use('MDeiml/tree-sitter-markdown')
 
 end)
-
