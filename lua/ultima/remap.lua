@@ -44,7 +44,7 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+-- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- netrw
 vim.keymap.set("n", "<leader>dd", ":Lexplore<CR>")
@@ -52,7 +52,14 @@ vim.keymap.set("n", "<leader>da", ":Lexplore<CR>")
 
 -- Prettier
 vim.keymap.set("n", "<leader>pr", "<Plug>(Prettier)")
--- vim.keymap.set("n", "<leader>pr", "<Plug>(prettier-format)")
+vim.keymap.set("n", "<leader>pr", ":Prettier<CR>")
 
 -- Emmett
 vim.g.user_emmet_leader_key=","
+
+-- Zen Mode
+vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
+
+-- Markdown Preview
+-- vim.g.mkdp_auto_start = 1
+vim.keymap.set("n", "<leader>md", "<Plug>MarkdownPreviewToggle")
