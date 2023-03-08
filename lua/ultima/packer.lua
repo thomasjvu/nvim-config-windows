@@ -29,7 +29,10 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
     -- use('mbbill/undotree')
     use('tpope/vim-fugitive')
+
+    -- Comments
     use('tpope/vim-commentary')
+    use('JoosepAlviste/nvim-ts-context-commentstring')
 
     -- use {
     --     'nvim-tree/nvim-tree.lua',
