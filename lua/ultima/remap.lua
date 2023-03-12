@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Quickjump to Nvim Config
 vim.keymap.set("n", "<leader>co", ":e ~/AppData/Local/nvim<CR>")
@@ -50,6 +49,12 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>dd", ":Lexplore<CR>")
 vim.keymap.set("n", "<leader>da", ":Lexplore<CR>")
 
+-- Split Window
+vim.keymap.set("n", "<leader>pv", ":Vex<CR>")
+vim.keymap.set("n", "<leader>hv", ":Hex<CR>")
+vim.keymap.set("n", "<leader>sv", ":Sex<CR>")
+vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
+
 -- Prettier
 vim.keymap.set("n", "<leader>pr", "<Plug>(Prettier)")
 vim.keymap.set("n", "<leader>pr", ":Prettier<CR>")
@@ -63,3 +68,6 @@ vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
 -- Markdown Preview
 -- vim.g.mkdp_auto_start = 1
 vim.keymap.set("n", "<leader>md", "<Plug>MarkdownPreviewToggle")
+
+-- Terminal
+vim.keymap.set("n", "<leader>te", ":terminal<CR>")

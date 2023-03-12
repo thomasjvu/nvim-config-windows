@@ -37,8 +37,6 @@ return require('packer').startup(function(use)
     })
 
     -- Themes
-    use('ackyshake/Spacegray.vim')
-
     use({
         'projekt0n/github-nvim-theme',
         tag = 'v0.0.7',
@@ -46,12 +44,14 @@ return require('packer').startup(function(use)
         config = function()
             require('github-theme').setup({
                 theme_style = "dark",
-                function_style = "italic",
+                function_style = "NONE",
                 colors = {hint = "orange", error = "#ff2147"},
                 transparent = true,
                 dark_sidebar = true,
                 dark_float = true,
                 comment_style = "italic",
+                keyword_style = "NONE",
+                variable_style = "NONE"
             })
         end
     })
@@ -73,10 +73,8 @@ return require('packer').startup(function(use)
     -- TreeSitter
     use({ 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } })
     -- use({'nvim-treesitter/playground'})
-    -- use('MDeiml/tree-sitter-markdown')
 
     -- Markdown
-    -- install without yarn or npm
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
@@ -98,6 +96,7 @@ return require('packer').startup(function(use)
     use('tpope/vim-commentary')
     use('JoosepAlviste/nvim-ts-context-commentstring')
 
+    -- Language Server
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -132,7 +131,8 @@ return require('packer').startup(function(use)
 
     use('nvim-lualine/lualine.nvim')
 
+    -- Extras
     -- use({ "echasnovski/mini.animate", branch = "stable" })
-
     -- use('Exafunction/codeium.vim')
+
 end)
