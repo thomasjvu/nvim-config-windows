@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 
 -- Quickjump to Nvim Config
 vim.keymap.set("n", "<leader>co", ":e ~/AppData/Local/nvim<CR>")
+vim.keymap.set("n", "<leader>obs", ":e ~/Documents/MEGA/AOS/<CR>")
 
 -- Open Current File in Browser
 vim.keymap.set("n", "<leader><C-o>", ":!%:p<CR>")
@@ -64,6 +65,9 @@ vim.g.user_emmet_leader_key=","
 
 -- Zen Mode
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
+
+-- Cellular Automaton
+vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")
 
 -- Markdown Preview
 -- vim.g.mkdp_auto_start = 1

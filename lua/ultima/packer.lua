@@ -19,6 +19,8 @@ return require('packer').startup(function(use)
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     }
 
+    use('theprimeagen/harpoon')
+
     -- Zen Mode
     use({
         "folke/zen-mode.nvim",
@@ -81,7 +83,6 @@ return require('packer').startup(function(use)
     })
 
     -- Movement
-    use('theprimeagen/harpoon')
 
     -- Git
     -- use('mbbill/undotree')
@@ -120,6 +121,10 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- File Size
+    -- use('barrett-ruth/import-cost.nvim')
+    -- use('yardnsm/vim-import-cost')
+
 
     -- Style
     use {
@@ -132,6 +137,7 @@ return require('packer').startup(function(use)
     use('nvim-lualine/lualine.nvim')
 
     -- Extras
+    use('eandrju/cellular-automaton.nvim')
     -- use({ "echasnovski/mini.animate", branch = "stable" })
     -- use('Exafunction/codeium.vim')
 
