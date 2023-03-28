@@ -19,7 +19,7 @@ prettier.setup({
     },
     cli_options = {
         tab_width = 4,
-        print_width = 150,
+        print_width = 120,
         vue_indent_script_and_style = true
     }
 })
