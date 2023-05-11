@@ -75,3 +75,5 @@ vim.keymap.set("n", "<leader>md", "<Plug>MarkdownPreviewToggle")
 
 -- Terminal
 vim.keymap.set("n", "<leader>te", ":terminal<CR>")
+
+vim.keymap.set("n", "<C-l>", "<Plug>jsdoc")

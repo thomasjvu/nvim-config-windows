@@ -96,6 +96,7 @@ return require('packer').startup(function(use)
     -- Comments
     use('tpope/vim-commentary')
     use('JoosepAlviste/nvim-ts-context-commentstring')
+    use('heavenshell/vim-jsdoc')
 
     -- Language Server
     use {
