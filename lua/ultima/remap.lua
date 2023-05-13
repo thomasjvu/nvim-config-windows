@@ -77,3 +77,6 @@ vim.keymap.set("n", "<leader>md", "<Plug>MarkdownPreviewToggle")
 vim.keymap.set("n", "<leader>te", ":terminal<CR>")
 
 vim.keymap.set("n", "<C-l>", "<Plug>jsdoc")
+
+-- Copy Error Message
+-- vim.keymap.set('n', '<leader>r', "[[<cmd>lua vim.fn.setreg('+', vim.fn.getqflist()[vim.fn.getqflist().location_list].text..'<CR>')<CR>]], { noremap = true, silent = true }")
